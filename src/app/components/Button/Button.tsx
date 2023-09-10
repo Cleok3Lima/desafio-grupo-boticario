@@ -1,6 +1,7 @@
 // Types
 import { ButtonProps as Props } from "./types"
 
+// Styles
 import styles from "./styles.module.scss"
 
 export default function Button(props: Props) {

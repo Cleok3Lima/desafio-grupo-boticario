@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 
 // Components
 import SlideTextContent from "@/components/SlideTextContent/SlideTextContent"
@@ -10,27 +9,22 @@ import Button from "@/components/Button/Button"
 import Slide01_600w from "@/images/Mobile/Mobile-01-600w.webp"
 import Slide01_700w from "@/images/Mobile/Mobile-01-700w.webp"
 import Slide01_800w from "@/images/Mobile/Mobile-01-800w.webp"
-import Slide01_1000w_3000w from "@/images/Mobile/Mobile-01-1000w-3000w.webp"
 
 import Slide02_600w from "@/images/Mobile/Mobile-02-600w.webp"
 import Slide02_700w from "@/images/Mobile/Mobile-02-700w.webp"
 import Slide02_800w from "@/images/Mobile/Mobile-02-800w.webp"
-import Slide02_1000w_3000w from "@/images/Mobile/Mobile-02-1000w-3000w.webp"
 
 import Slide03_600w from "@/images/Mobile/Mobile-03-600w.webp"
 import Slide03_700w from "@/images/Mobile/Mobile-03-700w.webp"
 import Slide03_800w from "@/images/Mobile/Mobile-03-800w.webp"
-import Slide03_1000w_3000w from "@/images/Mobile/Mobile-03-1000w-3000w.webp"
 
 import Slide04_600w from "@/images/Mobile/Mobile-04-600w.webp"
 import Slide04_700w from "@/images/Mobile/Mobile-04-700w.webp"
 import Slide04_800w from "@/images/Mobile/Mobile-04-800w.webp"
-import Slide04_1000w_3000w from "@/images/Mobile/Mobile-04-1000w-3000w.webp"
 
 import Slide06_600w from "@/images/Mobile/Mobile-06-600w.webp"
 import Slide06_700w from "@/images/Mobile/Mobile-06-700w.webp"
 import Slide06_800w from "@/images/Mobile/Mobile-06-800w.webp"
-import Slide06_1000w_3000w from "@/images/Mobile/Mobile-06-1000w-3000w.webp"
 
 import Slide01_desktop_1000w_3000w from "@/images/Desktop/Desktop-01-1000w-3000w.webp"
 import Slide02_desktop_1000w_3000w from "@/images/Desktop/Desktop-02-1000w-3000w.webp"
@@ -56,6 +50,7 @@ export const slides: any = [
           <Image
             src={Slide06_desktop_1000w_3000w}
             alt="Propaganda Boticário 1"
+            loading="lazy"
             style={{
               objectFit: "cover",
               width: "100%",
@@ -108,6 +103,7 @@ export const slides: any = [
           <Image
             src={Slide01_desktop_1000w_3000w}
             alt="Propaganda Boticário 2"
+            loading="lazy"
             style={{
               objectFit: "cover",
               width: "100%",
@@ -170,6 +166,7 @@ export const slides: any = [
           <Image
             src={Slide02_desktop_1000w_3000w}
             alt="Propaganda Boticário 2"
+            loading="lazy"
             style={{
               objectFit: "cover",
               width: "100%",
@@ -221,6 +218,7 @@ export const slides: any = [
           <Image
             src={Slide03_desktop_1000w_3000w}
             alt="Propaganda Boticário 3"
+            loading="lazy"
             style={{
               objectFit: "cover",
               width: "100%",
@@ -268,6 +266,7 @@ export const slides: any = [
           <Image
             src={Slide04_desktop_1000w_3000w}
             alt="Propaganda Boticário 4"
+            loading="lazy"
             style={{
               objectFit: "cover",
               width: "100%",

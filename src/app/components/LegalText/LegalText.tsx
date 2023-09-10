@@ -1,6 +1,7 @@
 // Types
 import { LegalTextProps as Props } from "./types"
 
+// Styles
 import styles from "./styles.module.scss"
 
 export default function LegalText(props: Props) {

@@ -8,9 +8,9 @@ import "swiper/scss"
 import "swiper/scss/effect-fade"
 import "swiper/scss/navigation"
 import "swiper/scss/pagination"
-
 import { slides } from "./slides"
 
+// Styles
 import styles from "./styles.module.scss"
 
 export default function Slideshow() {
@@ -42,8 +42,8 @@ export default function Slideshow() {
   return (
     <section className={styles.sliderContainer}>
       <Slider configs={slideshowConfigs}>
-        {slides.map((slide: any, index: number) => (
-          <SwiperSlide key={index}>{slide.content}</SwiperSlide>
+        {slides.map((slide: any, i: number) => (
+          <SwiperSlide key={i}>{slide.content}</SwiperSlide>
         ))}
         <div className={`pagination ${styles.pagination}`}></div>
       </Slider>
