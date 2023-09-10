@@ -1,0 +1,128 @@
+@keyframes progressBarAnimation {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.sliderContainer {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+
+  :global(.swiper) {
+    display: block;
+    position: relative;
+  }
+
+  :global(.swiper-wrapper) {
+    min-height: 160vw;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (min-width: 741px) {
+      min-height: 105vw;
+    }
+
+    @media screen and (min-width: 1000px) {
+      min-height: 54vw;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-height: 44vw;
+    }
+  }
+}
+
+.pagination {
+  bottom: 90px !important;
+
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  pointer-events: none;
+
+  :global(.swiper-pagination-bullet-active)::after {
+    animation: progressBarAnimation 5s linear;
+    animation-play-state: running, paused;
+    animation-fill-mode: forwards;
+  }
+}
+
+.paginationDots {
+  flex-basis: 40px;
+  margin: 0 6px !important;
+  position: relative;
+  padding: 18px 0;
+  pointer-events: auto;
+  z-index: 999;
+
+  background: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out;
+  }
+
+  &::before {
+    height: 8px;
+    width: 40px;
+    border-radius: 8px;
+  }
+
+  &::after {
+    height: 8px;
+    width: 40px;
+    border-radius: 8px;
+
+    transform-origin: left;
+    transform: scaleX(0);
+    background: rgb(255, 255, 255);
+  }
+}
+
+.titleContent {
+  span {
+    display: block;
+  }
+}
+
+.smallTitleContent {
+  span {
+    display: block;
+  }
+}
+
+.picture {
+  img {
+    min-height: 160vw;
+    bottom: 0;
+
+    @media screen and (min-width: 741px) {
+      min-height: 105vw;
+      bottom: calc(100vw - 940px);
+    }
+
+    @media screen and (min-width: 1000px) {
+      min-height: 54vw;
+      bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-height: 44vw;
+      bottom: -40px;
+    }
+  }
+}

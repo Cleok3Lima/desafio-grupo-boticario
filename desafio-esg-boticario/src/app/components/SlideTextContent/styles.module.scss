@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 19px;
+  padding-right: 19px;
+  --container-outer-margin: 0px;
+
+  @media screen and (min-width: 741px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.text-wrapper {
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  @media screen and (max-width: 740px) {
+    padding-bottom: 131px;
+  }
+  @media screen and (min-width: 741px) {
+    padding-bottom: 117px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 134px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 740px) {
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: 741px) {
+    margin-left: calc(
+      calc((100vw - max(calc((100vw - 1532px) / 2), 40px) * 2 - 24px * 19) / 20) +
+        24px
+    );
+    margin-right: auto;
+    width: calc(
+      calc((100vw - max(calc((100vw - 1532px) / 2), 40px) * 2 - 24px * 19) / 20) *
+        14 + 24px * 13
+    );
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: calc(
+      calc((100vw - max(calc((100vw - 1532px) / 2), 40px) * 2 - 24px * 19) / 20) *
+        10 + 24px * 9
+    );
+  }
+}
+
+.content-header {
+  margin: 16px 0 24px 0;
+  font-size: 32px;
+  line-height: 40px;
+  display: block;
+  font-family: "Domaine Sans Text", "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: -0.9px;
+
+  @media screen and (min-width: 741px) {
+    margin-top: 24px;
+    letter-spacing: -1px;
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  &--compact {
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    @media screen and (min-width: 741px) {
+      line-height: 1.2307692308;
+      font-size: 16px;
+    }
+  }
+
+  &--black {
+    color: #000000;
+  }
+}
+
+.button-wrapper {
+  justify-content: flex-start;
+  display: flex;
+  margin-top: 32px;
+}
+
+.button-set {
+  margin-top: 32px;
+
+  &--container {
+    @media screen and (max-width: 740px) {
+      margin: -12px;
+    }
+
+    @media screen and (min-width: 741px) {
+      display: inline-grid;
+      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
